@@ -68,9 +68,9 @@ const Step2Address = ({ formData, handleChange, nextStep, prevStep }) => (
             />
             <input
                 type="text"
-                name="city"
+                name="county"
                 placeholder="County"
-                value={formData.city}
+                value={formData.county}
                 onChange={handleChange}
                 required
                 className="p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 transition duration-150"
@@ -118,7 +118,7 @@ const Step3Confirmation = ({ formData, submitForm, prevStep }) => (
         <div className="bg-gray-50 p-6 rounded-lg border border-gray-200 shadow-inner space-y-3">
             <DetailItem label="Name" value={formData.name} />
             <DetailItem label="Email" value={formData.email} />
-            <DetailItem label="Address" value={`${formData.address}, ${formData.city}`} />
+            <DetailItem label="Address" value={`${formData.address}, ${formData.city},${formData.county}`} />
             <DetailItem label="Subscription" value={formData.subscription.toUpperCase()} isPrimary={true} />
         </div>
 
